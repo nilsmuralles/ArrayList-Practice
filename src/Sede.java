@@ -256,15 +256,10 @@ public class Sede {
 
         } else { // Si no está vacío
             for (int i = 0; i < notas.size(); i++) {
-                int numReps = 0;
-                for (int j = 0; j < notas.size(); j++) {
-                    if (notas.get(i) == notas.get(j)) {
-                        numReps++;
-                    }
-                    if (numReps > maxReps) {
-                        moda = notas.get(i);
-                        maxReps = numReps;
-                    }
+                int numReps = Collections.frequency(notas, notas.get(i));
+                if (numReps > maxReps) {
+                    moda = notas.get(i);
+                    maxReps = numReps;
                 }
             }
             return moda;

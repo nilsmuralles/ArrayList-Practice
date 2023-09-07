@@ -21,6 +21,7 @@ public class Main {
         // Ciclo principal
         boolean seguir = true;
         while (seguir) {
+            System.out.println("");
             System.out.println("---BIENVENIDO---");
             System.out.println("1. Nueva sede");
             System.out.println("2. Administrar sede");
